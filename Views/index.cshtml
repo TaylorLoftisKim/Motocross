@@ -1,0 +1,14 @@
+<h1>Welcome to the Dirt Bike Encyclopedia</h1>
+  <form action="/add-bike" method="post">
+    <div class="form-group">
+      <label for="new-brand">Enter a Brand here:</label>
+      <input type="text" name="new-brand">
+    </div>
+    <button type="submit" name="button">Enter</button>
+  </form>
+  <ul>
+    @foreach (var brand in @Model)
+    {
+      <li>@brand.GetName()</li>
+    }
+  </ul>
